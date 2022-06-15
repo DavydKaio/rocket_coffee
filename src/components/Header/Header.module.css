@@ -7,6 +7,11 @@
   margin: 50px 9% 0 18%;
 }
 
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
 .nav_list {
   display: flex;
   flex-direction: row;
@@ -32,4 +37,14 @@
 .button:hover {
   background-color: var(--button);
   transition: 1s;
+}
+
+@media(max-width: 428px) {
+  .nav_list {
+    display: none;
+  }
+  
+  .button {
+    display: none;
+  }
 }

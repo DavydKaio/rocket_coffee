@@ -1,19 +1,22 @@
-import react from 'react'
 import Image from 'next/image'
+import { useEffect, useState } from 'react';
 
-import logo from '../../../public/assets/logos/logo-desktop.svg'
+import logo1 from '../../../public/assets/logos/logo-desktop.svg'
+import logo2 from '../../../public/assets/logos/logo-mobile.svg'
 
 import styles from './Header.module.css'
 
 export default function Header(props) {
+  console.log(props.windowSize)
   return (
     <header className={styles.header}>
-      <a href="#">
+      <a href="#" className={styles.logo}>
         <Image
-          src={logo}
+          src={props.windowSize > 428 ? logo1 : logo2}
           alt='logo'
           width={50}
           height={50}
+          layout='fixed'
         />
       </a>
       <nav>
